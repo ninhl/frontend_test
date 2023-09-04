@@ -7,34 +7,49 @@ const imagemin = require("gulp-imagemin");
 const imagewebp = require("gulp-webp");
 const browsersync = require("browser-sync").create();
 
+const paths = {
+  styles: {
+    src: ["src/scss/*.scss", "src/css/*.css"],
+    dest: "dist/css",
+  },
+  image: {
+    src: "src/images/*.{jpg,png}",
+    dest: "dist/images",
+  },
+  js: {
+    src: "src/js/*.js",
+    dest: "dist/js",
+  },
+};
+
 // Tasks
 const compilescss = () => {
-  return src("src/sass/*.scss")
+  return src(paths.styles.src)
     .pipe(sass())
     .pipe(prefix("last 2 versions"))
     .pipe(minify())
-    .pipe(dest("dist/css"));
+    .pipe(dest(paths.styles.dest));
 };
 
 const optimizeimg = () => {
-  return src("src/images/*.{jpg,png}")
+  return src(paths.image.src)
     .pipe(
       imagemin([
         imagemin.mozjpeg({ quality: 80, progressive: true }),
         imagemin.optipng({ optimizationLevel: 2 }),
       ])
     )
-    .pipe(dest("dist/images"));
+    .pipe(dest(paths.image.dest));
 };
 
 const webpImage = () => {
-  return src("dist/images/*.{jpg,png}")
+  return src(paths.image.dest + "/*.{jpg,png}")
     .pipe(imagewebp())
-    .pipe(dest("dist/images"));
+    .pipe(dest(paths.image.dest));
 };
 
 const jsmin = () => {
-  return src("src/js/*.js").pipe(terser()).pipe(dest("dist/js"));
+  return src(paths.js.src).pipe(terser()).pipe(dest(paths.js.dest));
 };
 
 const browsersyncServe = (done) => {
@@ -49,20 +64,11 @@ const browsersyncReload = (done) => {
 
 // Watch task
 const watchTask = () => {
-  watch(
-    [
-      "*.html",
-      "src/sass/**/*.scss",
-      "src/js/*.js",
-      "src/images/*",
-      "dist/images/*.{jpg,png}",
-    ],
-    browsersyncReload
-  );
-  watch("src/sass/**/*.scss", compilescss);
-  watch("src/js/*.js", jsmin);
-  watch("src/images/*", optimizeimg);
-  watch("dist/images/*.{jpg,png}", webpImage);
+  watch("*.html", browsersyncReload);
+  watch(paths.styles.src, compilescss);
+  watch(paths.js.src, jsmin);
+  watch(paths.image.src, optimizeimg);
+  watch(paths.image.dest + "/*.{jpg,png}", webpImage);
 };
 
 exports.default = series(

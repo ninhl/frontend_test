@@ -1,14 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../dist/css/styles.css">
-</head>
-<body>
-    <div class="container">
-        <img src="./src/images/logo.png" alt="">
+    <link rel="stylesheet" type="text/css" href="../dist/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../dist/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;800&family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="header__side--left side">
+          <div class="text">Search here</div>
+          <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div class="header__logo">
+          <img src="./dist/images/logo.png" alt="" />
+        </div>
+        <div class="header__side--right side">
+          <p class="text">Register / Login</p>
+          <div class="icon-wrapper">
+            <button type="button" class="icon-button">
+              <i class="icon fa-regular fa-heart"></i>
+              <span class="icon-button__badge">2</span>
+            </button>
+            <button type="button" class="icon-button">
+              <i class="icon fa-solid fa-cart-shopping"></i>
+              <span class="icon-button__badge">2</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu-item"><a href="">HOME</a></li>
+          <li class="menu-item"><a href="">ABOUT US</a></li>
+          <li class="menu-item"><a href="">SERVICE</a></li>
+          <li class="menu-item"><a href="">PRICING</a></li>
+          <li class="menu-item"><a href="">BLOG</a></li>
+          <li class="menu-item"><a href="">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="banner">
+        <div class="content-inner">
+          <div class="main-content">
+            <h1 class="title">American Food</h1>
+            <div class="sub-title-wrapper">
+              <h2 class="sub-title">The Best Taste Food</h2>
+              <p class="text-content">
+                Lorem Ipsum available, but the majority have suffered alteration
+                in some form, by injected humour, or randomised words
+              </p>
+            </div>
+          </div>
+          <div class="button-group">
+            <button class="border-button large">ORDER NOW</button>
+            <button class="border-button small">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="header-section">
+        <div class="header-section__title">
+          <div class="title-wrapper">
+            <h3 class="deep-text">about us</h3>
+            <h3 class="main-text">about us</h3>
+          </div>
+        </div>
+        <div class="header-section__content">
+          <p class="main-content">
+            Lorem Ipsum available, but the majority have suffered alteration in
+            some form by injected humour
+          </p>
+        </div>
+      </div>
+      <div class="blog">
+        <div class="content-inner">
+          <div class="blog__main-content">
+            <h3 class="title">
+              Let food be thy medicine medicine be thy food.
+            </h3>
+            <div class="desc">
+              <p>
+                Lorem Ipsum available, but the majority have suffered alteration
+                in some form by injected humour randomise words which don't look
+                even slightly believable. If you are going to use a passage
+              </p>
+              <p>
+                Lorem Ipsum, you need to be sure there isn't anything
+                embarrassing hidden in the middle of text.
+              </p>
+            </div>
+          </div>
+          <div class="button-group">
+            <button class="border-button large">READ MORE</button>
+            <button class="border-button small">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+        </div>
+        <div class="blog__image-wrapper">
+          <div class="food-image">
+            <img src="./dist/images/youtube.webp" alt="" class="youtube" />
+          </div>
+        </div>
+      </div>
+      <div class="blog reverse">
+        <div class="content-inner">
+          <div class="blog__main-content">
+            <h3 class="title">
+              Let food be thy medicine medicine be thy food.
+            </h3>
+            <div class="desc">
+              <p>
+                Lorem Ipsum available, but the majority have suffered alteration
+                in some form by injected humour randomise words which don't look
+                even slightly believable. If you are going to use a passage
+              </p>
+              <p>
+                Lorem Ipsum, you need to be sure there isn't anything
+                embarrassing hidden in the middle of text.
+              </p>
+            </div>
+          </div>
+          <div class="button-group">
+            <button class="border-button large">READ MORE</button>
+            <button class="border-button small">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+        </div>
+        <div class="blog__image-wrapper">
+          <div class="food-image">
+            <img src="./dist/images/youtube.webp" alt="" class="youtube" />
+          </div>
+        </div>
+      </div>
+      <div class="header-section">
+        <div class="header-section__title">
+          <div class="title-wrapper">
+            <h3 class="deep-text">service</h3>
+            <h3 class="main-text">service</h3>
+          </div>
+        </div>
+        <div class="header-section__content">
+          <p class="main-content">
+            Lorem Ipsum available, but the majority have suffered alteration in
+            some form by injected humour
+          </p>
+        </div>
+      </div>
+      <div class="product container">
+        <div class="product__content">
+          <div class="product-info">
+            <h3 class="product-info__name">Peanut butter</h3>
+            <h3 class="product-info__price">$45</h3>
+          </div>
+          <div class="product-desc">
+            <p>
+              Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't
+              look even slightly believable. If you are going to use a passage
+              of Lorem Ipsum, you need to be sure
+            </p>
+          </div>
+          <div class="product-button">
+            <button class="border-button medium">BUY NOW</button>
+          </div>
+        </div>
+        <div class="product__image">
+          <img src="./dist/images/cart.webp" alt="" />
+        </div>
+      </div>
+      <div class="product container">
+        <div class="product__content">
+          <div class="product-info">
+            <h3 class="product-info__name">Peanut butter</h3>
+            <h3 class="product-info__price">$45</h3>
+          </div>
+          <div class="product-desc">
+            <p>
+              Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't
+              look even slightly believable. If you are going to use a passage
+              of Lorem Ipsum, you need to be sure
+            </p>
+          </div>
+          <div class="product-button">
+            <button class="border-button medium">BUY NOW</button>
+          </div>
+        </div>
+        <div class="product__image">
+          <img src="./dist/images/cart.webp" alt="" />
+        </div>
+      </div>
+      <div class="product container">
+        <div class="product__content">
+          <div class="product-info">
+            <h3 class="product-info__name">Peanut butter</h3>
+            <h3 class="product-info__price">$45</h3>
+          </div>
+          <div class="product-desc">
+            <p>
+              Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't
+              look even slightly believable. If you are going to use a passage
+              of Lorem Ipsum, you need to be sure
+            </p>
+          </div>
+          <div class="product-button">
+            <button class="border-button medium">BUY NOW</button>
+          </div>
+        </div>
+        <div class="product__image">
+          <img src="./dist/images/cart.webp" alt="" />
+        </div>
+      </div>
+      <div class="sub-banner">
+        <div class="content-inner">
+          <div class="main-content">
+            <h3 class="type">Speical</h3>
+            <h3 class="title">SALE 50% DISCOUNT</h3>
+            <div class="sub-title-wrapper">
+              <h2 class="sub-title">ALL FOOD PRODUCTS</h2>
+              <p class="text-content">
+                Lorem Ipsum available, but the majority have suffered some form,
+                by injected humour, or randomised words of Lorem Ipsum, you need
+                to be sure.
+              </p>
+            </div>
+          </div>
+          <div class="button-group">
+            <button class="border-button large">DISCOVER NOW</button>
+          </div>
+        </div>
+      </div>
+      <div class="header-section">
+        <div class="header-section__title">
+          <div class="title-wrapper">
+            <h3 class="deep-text">PRICING</h3>
+            <h3 class="main-text">PRICING</h3>
+          </div>
+        </div>
+        <div class="header-section__content">
+          <p class="main-content">
+            Lorem Ipsum available, but the majority have suffered alteration in
+            some form by injected humour
+          </p>
+        </div>
+      </div>
+      <div class="carts">
+        <div class="carts__item">
+          <div class="item-header">
+            <h3 class="name">Basic</h3>
+            <h3 class="price">$35</h3>
+          </div>
+          <div class="item-content">
+            <div class="content-wrapper">
+              <ul class="list-dish">
+                <li class="dish-name">6 Pis Chiken</li>
+                <li class="dish-name">3 Pis Beef Chiken</li>
+                <li class="dish-name">2 Pis Burger</li>
+              </ul>
+            </div>
+            <button class="border-button small">BUY NOW</button>
+          </div>
+        </div>
+        <div class="carts__item">
+          <div class="item-header">
+            <h3 class="name">Standart</h3>
+            <h3 class="price">$50</h3>
+            <div class="hot">Hot</div>
+          </div>
+          <div class="item-content">
+            <div class="content-wrapper">
+              <ul class="list-dish">
+                <li class="dish-name">6 Pis Chiken</li>
+                <li class="dish-name">3 Pis Beef Chiken</li>
+                <li class="dish-name">2 Pis Burger</li>
+              </ul>
+            </div>
+            <button class="border-button small">BUY NOW</button>
+          </div>
+        </div>
+        <div class="carts__item">
+          <div class="item-header">
+            <h3 class="name">Premium</h3>
+            <h3 class="price">$45</h3>
+          </div>
+          <div class="item-content">
+            <div class="content-wrapper">
+              <ul class="list-dish">
+                <li class="dish-name">6 Pis Chiken</li>
+                <li class="dish-name">3 Pis Beef Chiken</li>
+                <li class="dish-name">2 Pis Burger</li>
+              </ul>
+            </div>
+            <button class="border-button small">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+      <div class="sub-banner-reverse">
+        <div class="content-inner">
+          <div class="main-content">
+            <h3 class="type">Speical</h3>
+            <h3 class="title">SALE 50% DISCOUNT</h3>
+            <div class="sub-title-wrapper">
+              <h2 class="sub-title">ALL FOOD PRODUCTS</h2>
+              <p class="text-content">
+                Lorem Ipsum available, but the majority have suffered some form,
+                by injected humour, or randomised words of Lorem Ipsum, you need
+                to be sure.
+              </p>
+            </div>
+          </div>
+          <div class="button-group">
+            <button class="border-button large">DISCOVER NOW</button>
+          </div>
+        </div>
+      </div>
+      <div class="header-section">
+        <div class="header-section__title">
+          <div class="title-wrapper">
+            <h3 class="deep-text">Blog</h3>
+            <h3 class="main-text">Blog</h3>
+          </div>
+        </div>
+        <div class="header-section__content">
+          <p class="main-content">
+            Lorem Ipsum available, but the majority have suffered alteration in
+            some form by injected humour
+          </p>
+        </div>
+      </div>
+      <div class="sub-blog container">
+        <div class="blog-item">
+          <img src="./dist/images/blog.webp" alt="" />
+        </div>
+        <div class="blog-item">
+          <div class="blog-content">
+            <h2 class="title">Eat food. Not too much mostly plants.</h2>
+            <p class="desc">
+              Lorem Ipsum available, but the majority have suffered alteration
+              some form, by injected humour randomised words.
+            </p>
+            <div class="button-group">
+              <button class="border-button large">Read More</button>
+            </div>
+          </div>
+        </div>
+        <div class="blog-item">
+          <img src="./dist/images/blog.webp" alt="" />
+        </div>
+      </div>
+      <div class="footer">
+        <div class="triangle">
+          <div class="image-group">
+            <img src="./dist/images/triangle.webp" alt="" class="triangle" />
+            <img
+              src="./dist/images/triangle-dashed.webp"
+              alt=""
+              class="triangle-dashed"
+            />
+          </div>
+        </div>
+        <div class="footer-content">
+          <div class="logo">
+            <img src="./dist/images/logo.png" alt="" />
+          </div>
+          <h2 class="title">American Food</h2>
+          <p class="desc">The Best Taste Food</p>
+          <ul class="contact-list">
+            <li class="item">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li class="item">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li class="item">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li class="item">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+          </ul>
+          <a class="web-link">yourwebsite.com</a>
+        </div>
+        <div class="circle">
+          <div class="image-group">
+            <img src="./dist/images/circle.webp" alt="" class="circle" />
+            <img
+              src="./dist/images/circle-dashed.webp"
+              alt=""
+              class="circle-dashed"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
