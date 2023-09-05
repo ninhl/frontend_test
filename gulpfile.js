@@ -64,11 +64,11 @@ const browsersyncReload = (done) => {
 
 // Watch task
 const watchTask = () => {
-  watch("*.html", browsersyncReload);
-  watch(paths.styles.src, compilescss);
-  watch(paths.js.src, jsmin);
-  watch(paths.image.src, optimizeimg);
-  watch(paths.image.dest + "/*.{jpg,png}", webpImage);
+  watch("*.html", series(compilescss, browsersyncReload));
+  watch(paths.styles.src, series(compilescss, browsersyncReload));
+  watch(paths.js.src, series(jsmin, browsersyncReload));
+  watch(paths.image.src, series(optimizeimg, browsersyncReload));
+  watch(paths.image.dest + "/*.{jpg,png}", series(webpImage, browsersyncReload));
 };
 
 exports.default = series(
